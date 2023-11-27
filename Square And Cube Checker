@@ -1,0 +1,24 @@
+public class SquareAndCube {
+
+	public static void main(String[] args) {
+		SquareAndCube value =new SquareAndCube();
+		value.checker(4, 8);
+		value.checker(12,24);
+		value.checker(9, 27);
+
+	}
+	public void checker(int numb1,int numb2)
+	{
+		int value1=(int)Math.sqrt(numb1);
+		int value2=(int)Math.cbrt(numb2);
+		if(value1==value2)
+		{
+			System.out.println("True");
+		}
+		else
+		{
+			System.out.println("False");
+		}
+	}
+
+}
