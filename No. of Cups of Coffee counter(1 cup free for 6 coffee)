@@ -1,0 +1,16 @@
+public class CoffeeCupsCounter {
+
+	public static void main(String[] args) {
+		CoffeeCupsCounter cups=new CoffeeCupsCounter();
+		cups.counter(2744);
+		
+	}
+	public void counter(int cups)
+	{
+		int free=(int)cups/6;
+		int value=free+cups;
+		System.out.println("The total number of cups will be "+value+" where you get"+free+" cups for free. ");
+		
+	}
+
+}
