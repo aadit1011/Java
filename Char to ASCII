@@ -1,0 +1,15 @@
+public class CharToAscii {
+
+	public static void main(String[] args) {
+		 CharToAscii value=new CharToAscii();
+		 value.converter('a');
+		 value.converter('A');
+
+	}
+	public void converter(char value)
+	{
+		int val=(int)value;
+		System.out.println(val);
+	}
+
+}
