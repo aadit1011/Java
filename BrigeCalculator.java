@@ -1,5 +1,3 @@
-package com.practice;
-
 public class BrigeCalculator {
 
 	public static void main(String[] args) {
