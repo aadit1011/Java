@@ -1,0 +1,22 @@
+public class InvertRgbColor {
+
+	public static void main(String[] args) {
+		InvertRgbColor value=new InvertRgbColor();
+		value.Inverter(0, 0, 0);
+		value.Inverter(246, 543, 456);
+		
+		
+	}
+	public void Inverter(int val1,int val2,int val3)
+	{
+		if(((val1>=0)&&(val2>=0)&&(val3>=0))&&(val1<255&&val2<255&&val3<255))
+		{
+			System.out.printf("%d,%d,%d",255-val1,255-val2,255-val3);
+		}
+		else
+		{
+			System.out.println("Enter proper RGB Format");
+		}
+	}
+
+}
