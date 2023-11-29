@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class IntrestCalculator {
+
+	public static void main(String[] args) {
+		Scanner scanner=new Scanner(System.in);
+		IntrestCalculator value=new IntrestCalculator();
+		System.out.println("Enter principal amount=");
+		double principal=scanner.nextDouble();
+		System.out.println("Enter Intrest Rate-");
+		float rate=scanner.nextFloat();
+		System.out.println("Enter time of borrow(in yrs)-");
+		int time=scanner.nextInt();
+		while(true)
+		{
+		System.out.println("enter\n1 for calculating simple intrest and \n 2 for Compound Intrest\n 3 for exiting programm=");
+		int choice=scanner.nextInt();	
+		switch(choice)
+		{
+			case 1:
+				value.simpleIntrestCalculator(principal, rate, time);
+				break;
+			case 2:
+				System.out.println("Enter the no. of times intrest is compounded a year=");
+				int repeat=scanner.nextInt();
+				value.compoundIntrest(principal, rate, time, repeat);
+				break;
+			case 3:
+				System.out.println("Terminating the programm..............");
+				scanner.close();
+				System.exit(0);
+				break;
+			default:
+				System.out.println("Error choice................");
+				break;
+		}
+		}
+	}
+	public  void simpleIntrestCalculator(double value1,float value2 ,int value3 )
+	{
+		double simpleIntrest=value1*(value2/100)*value3;
+		System.out.println("Simple Intrest amount for principal "+value1+" For "+value3+"yrs with rate "+value2+"is="+simpleIntrest);
+	}
+	public void compoundIntrest(double value1,float value2 ,int value3,int value4)
+	{
+		float part1=(1+(value2/(100*value4)));
+		float part2=value4*value3;
+		float part3=(float)Math.pow(part1,part2);
+		double compoundIntrest=value1*part3;
+		System.out.println("Compound Intrest for principal "+value1+ " for "+value2+"% rate for time"+value3+"yrs is="+compoundIntrest);
+	}
+
+}
