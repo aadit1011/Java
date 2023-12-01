@@ -1,0 +1,52 @@
+ public class BankAccount {
+
+	 void withdraw(double amount)
+	 {	 
+	 }
+	 void deposit(double amount2)
+	 { 
+	 }
+	public static void main(String[] args) {
+	}
+
+}
+public class SavingAccount extends BankAccount{
+	double amount;
+	@Override
+	
+	void deposit(double amount)
+	{
+		this.amount+=amount;
+		System.out.println(amount+" has been deposited in your account successfully");
+		System.out.println("Now your current bank balance is Rs."+this.amount);
+	}
+	void withdraw(double amount2)
+	{
+		if(this.amount<=100)
+		{
+			System.out.println("Your bank balance is less than 100 rupees which is"+this.amount);
+		}
+		else
+		{
+			System.out.println("You have withdrawn amount of "+amount2);
+			this.amount-=amount2;
+			System.out.println("Now your bank Balance is Rs."+this.amount);
+		}
+	}
+	void checkBalance()
+	{
+		System.out.println("Your current  Bank Balance is Rs."+this.amount);
+	}
+	
+	public static void main(String[] args) {
+	}
+
+}
+public class Checker {
+	public static void main(String [] args)
+	{
+		SavingAccount account1=new SavingAccount();
+		account1.checkBalance();
+		account1.deposit(5000);
+	}
+}
