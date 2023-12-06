@@ -1,0 +1,57 @@
+import java.io.File;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Handling{
+	public static void main(String [] args) {
+		File file1=new File("C:\\Users\\bardan\\Desktop\\Alert\\Java-files\\Example5.txt");
+		File file3=new File("C:\\Users\\bardan\\Desktop\\Alert\\Java-files\\Example4.txt");
+			
+			try {	
+					if(file1.createNewFile())
+					{
+							FileWriter file2=new FileWriter("C:\\Users\\bardan\\Desktop\\Alert\\Java-files\\Example5.txt");
+							System.out.println("New file created.Proceeding further.............");
+							String name="My name is Aadit Sharma";
+							file2.write(name);
+							file2.close();
+							System.out.println("Successfully written inside the file.");
+					}
+					else
+					{
+						throw new Exception();
+					}
+				}
+		
+			catch(Exception ef)
+			{
+				System.out.println("No file was created");
+			}
+		
+		
+		try {
+			
+				if(file3.exists())
+				{
+					if(file3.delete())
+					{
+						System.out.println(file3.getName()+" file has been deleted.");
+					}
+		
+				}
+				else
+				{
+					throw new IOException();
+				}
+		}
+		
+			catch(IOException e)
+					{
+						System.out.println("No file deleted");	
+			
+		}
+	}
+}
+
+
