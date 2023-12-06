@@ -1,0 +1,36 @@
+import java.io.File;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Handling{
+	public static void main(String [] args) {
+		File file1=new File("C:\\Users\\bardan\\Desktop\\Alert\\Java-files\\Example2.txt");
+		try {
+			if(file1.createNewFile())
+			{
+				
+					FileWriter file2=new FileWriter("C:\\Users\\bardan\\Desktop\\Alert\\Java-files\\Example2.txt");
+					System.out.println("New file created.Proceeding further.............");
+					String name="My name is Aadit Sharma";
+					file2.write(name);
+					file2.close();
+					System.out.println("Successfully written inside the file.");
+			}
+			else
+			{
+				throw new IOException();
+			}
+			
+		}	
+			catch(IOException e)
+				{
+					System.out.println("No file created");	
+				}
+				finally
+				{
+					System.out.println(file1.getAbsolutePath()+file1.getAbsoluteFile());
+				}
+		
+	}
+}
