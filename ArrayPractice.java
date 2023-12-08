@@ -14,6 +14,7 @@ class ArrayPractice
           names[0]= "Aadit";
           names[1]="Arnold";
           names[2]="Tom";
+           
           names[3]="Bardan";
           System.out.println(Arrays.toString(names));
      }
