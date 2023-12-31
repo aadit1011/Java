@@ -1,0 +1,28 @@
+public class Person {
+	
+	public void eat() {
+		System.out.println("Person eats junk food ");
+	}
+	public void exercise() {
+		System.out.println("Person do not exercise");
+	}
+}
+public class Athlete extends Person {
+	@Override
+	public void eat() {
+		super.eat();
+		System.out.println("But,Athlete eats Healthy food");
+	}
+	@Override
+	public void exercise() {
+		super.exercise();
+		System.out.println("But,Athlete exercises heavy portion a day");
+	}
+	public static void main(String[] args) {
+		Athlete ath=new Athlete();
+		ath.eat();
+		ath.exercise();
+
+	}
+
+}
