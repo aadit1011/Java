@@ -1,0 +1,31 @@
+
+import javax.swing.JFrame;
+import java.awt.Button;
+
+import java.awt.*;
+
+public class FramePractice extends JFrame {
+	
+	FramePractice(){
+		JFrame frame=new JFrame("Example");
+		frame.setLayout(new BorderLayout());
+		frame.setSize(500,500);
+		frame.setVisible(true);
+		Button east=new Button("RIGHT");
+		Button north=new Button("TOP");
+		Button west=new Button("LEFT");
+		frame.add(east,BorderLayout.EAST);
+		Button south=new Button("Bottom");
+		frame.add(south,BorderLayout.SOUTH);
+		frame.add(west,BorderLayout.WEST);
+		Button center=new Button("CENTER");
+		frame.add(north,BorderLayout.NORTH);
+		frame.add(center,BorderLayout.CENTER);
+	}
+	
+	public static void main(String[] args) {
+		new FramePractice();
+		
+	}
+
+}
