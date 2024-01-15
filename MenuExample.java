@@ -1,13 +1,12 @@
-package com.casita;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class MenuExample {
+public class NotepadFrame {
 	JMenu edit,format,view,help;
 	JMenuItem New,open,save,saveAs,print,exit,cut,copy,paste,delete,undo,replace,view_help,about;
 	
-	MenuExample(){
+	NotepadFrame(){
 		JTextArea text=new  JTextArea();
 		text.setBounds(5,5,400,400);
 		JFrame frame=new JFrame("Notepad");
@@ -48,7 +47,7 @@ public class MenuExample {
 		frame.setVisible(true);
 	}
 	public static void main(String[] args) {
-		new MenuExample();
+		new NotepadFrame();
 
 	}
 
