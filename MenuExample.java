@@ -15,10 +15,10 @@ public class MenuExample {
 		address=new JMenu("Address");
 		roll=new JMenu("Roll No.");
 		number=new JMenu("Phone Number");
-		em=new JMenuItem("vardanshiwakoti123@gmail.com");
-		ad=new JMenuItem("Pepsicola");
-		rln=new JMenuItem("210108");
-		num=new JMenuItem("9863034803");
+		em=new JMenuItem("aaditsharma@gmail.com");
+		ad=new JMenuItem("Palm Jumeriah,Dubai");
+		rln=new JMenuItem("21012330");
+		num=new JMenuItem("9862377442");
 		email.add(em);
 		address.add(ad);
 		roll.add(rln);
