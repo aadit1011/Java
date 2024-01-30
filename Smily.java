@@ -1,5 +1,3 @@
-package exam;
-
 import java.awt.*;
 import javax.swing.*;
 
