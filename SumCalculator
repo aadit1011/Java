@@ -1,0 +1,59 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class SumCalculator implements ActionListener {
+		JFrame frame;
+		JTextField num1,num2,res;
+		JButton press,consol;
+		SumCalculator(){
+			
+			frame=new JFrame("Calculator");
+			 num1=new JTextField("");
+			 num2=new JTextField("");
+			frame.add(num2);frame.add(num1);
+			num1.setBounds(10,10,60,20);
+			num2.setBounds(90,10,60,20);
+			res=new JTextField("");
+			res.setBounds(50,50,50,50);
+			frame.add(res);
+			 press=new JButton("press");
+			press.setBounds(50,150,90,40);
+			press.addActionListener(this);
+			frame.add(press);
+//			num1.addActionListener(this);
+//			num2.addActionListener(this);
+			 consol=new JButton("consol");
+			consol.setBounds(100,50,50,50);
+			frame.add(consol);
+			consol.addActionListener(this);
+			frame.setLayout(null);
+			frame.setSize(500,500);
+			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			frame.setVisible(true);
+		}
+		public void actionPerformed(ActionEvent e) {
+			if(e.getActionCommand().equals("press")) {
+//			if(e.getSource()==press) {
+				String a=num1.getText();
+				int a_num=Integer.parseInt(a);
+				String b=num2.getText();
+				int b_num=Integer.parseInt(b);
+				int sum=a_num+b_num;
+				res.setText(Integer.toString(sum));
+			}
+//			else if(e.getActionCommand().equals(consol)) {
+			else {
+				String a=num1.getText();
+				int a_num=Integer.parseInt(a);
+
+				String b=num2.getText();
+				int b_num=Integer.parseInt(b);
+				int sum=a_num+b_num;
+				System.out.println("The numbers you entered are= "+a_num+" and "+b_num+" which result in sum="+sum);
+			}
+		}
+	public static void main(String[] args) {
+		new SumCalculator();
+	}
+}
